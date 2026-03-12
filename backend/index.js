@@ -18,7 +18,8 @@ const app = express()
 app.use(cookieParser());
 app.use(express.json())
 app.use(cors({
-    origin:"http://localhost:5173",
+    origin:["http://localhost:5173","https://wms-frontend-1tw3.onrender.com"],
+
     credentials:true
 }))
 
