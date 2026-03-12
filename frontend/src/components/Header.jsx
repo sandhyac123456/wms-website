@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import logo from '../assets/logo.jpg'; 
 
 const navLinks = [
   { name: 'Home', path: '/' },
@@ -87,8 +88,8 @@ function Header() {
               aria-label="White Mirror Solutions - Home"
             >
               <img
-                src="/logo.jpg"
-                alt=""
+                src={logo} 
+                alt="White Mirror Solutions Logo"
                 className="h-8 w-8 sm:h-10 sm:w-10 object-contain drop-shadow rounded"
               />
               <span className="hidden sm:inline text-xs xs:text-sm sm:text-base font-bold text-gray-900 tracking-tight">
