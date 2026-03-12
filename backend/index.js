@@ -31,7 +31,7 @@ app.use("/api/v1/applications", applicationRouter);
 app.use("/api/v1/blog",blogRouter);
 app.use("/api/v1/category",categoryRouter);
 app.use("/api/v1/ai",aiRouter);
-const port = process.env.PORT 
+const port = process.env.PORT || 3000;
 
 app.get("/", (req, res)=>{
     res.send("hii")
