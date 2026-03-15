@@ -21,14 +21,16 @@ export const createBlog = async (req, res) => {
 
     // ✅ If image file exists
     if (req.file) {
-      const result = await cloudinary.uploader.upload(req.file.path, {
-        folder: "blogs",
-      });
 
-      imageUrl = result.secure_url;
-      fs.unlinkSync(req.file.path);
+const base64 = `data:${req.file.mimetype};base64,${req.file.buffer.toString("base64")}`;
 
-    }
+const result = await cloudinary.uploader.upload(base64,{
+folder:"blogs"
+});
+
+imageUrl = result.secure_url;.
+
+}
 
     let slug = slugify(title, { lower: true });
 
