@@ -28,7 +28,7 @@ const result = await cloudinary.uploader.upload(base64,{
 folder:"blogs"
 });
 
-imageUrl = result.secure_url;.
+imageUrl = result.secure_url;
 
 }
 
