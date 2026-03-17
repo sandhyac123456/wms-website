@@ -93,3 +93,14 @@ export const categoryEndpoints = {
 export const aiEndPoints = {
   AI_CHAT_API: "/ai/chat"
 };
+
+export const projectEndpoints = {
+  // Admin
+  CREATE_PROJECT_API: "/projects/create",
+  GET_ALL_PROJECTS_ADMIN_API: "/projects/admin",
+  DELETE_PROJECT_API: "/projects/delete",
+  // UPDATE_PROJECT_API: "/projects/update",
+
+  // Public
+  GET_ALL_PROJECTS_API: "/projects",
+};

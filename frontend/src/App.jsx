@@ -23,6 +23,8 @@ import BlogPostForm from './adminpage/BlogPostForm';
 import BlogDetails from './components/BlogDetail';
 import ResumeView from './adminpage/ResumeView';
 import AIChat from './components/AI/AIChat';
+import AdminProjects from './adminpage/AdminProjectForm';
+import AdminProjectList from './adminpage/AdminProjectList';
 
 function HomePage() {
   return (
@@ -60,6 +62,8 @@ function App() {
         <Route path='/admin/blogs' element={<AdminBlogs/>}/>
         <Route path='/admin/blogs/create' element={<BlogPostForm/>}/>
         <Route path='/admin/blogs/edit/:id' element={<BlogPostForm/>}/>
+        <Route path='/admin/projects' element={<AdminProjects/>}/>
+        <Route path='/admin/projects-list' element={<AdminProjectList/>}/>
       </Routes>
 
       {!isAdminRoute && <AIChat/>}

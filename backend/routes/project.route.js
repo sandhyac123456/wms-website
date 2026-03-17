@@ -13,7 +13,7 @@ import { upload } from "../middlewares/uploadMiddleware.js";
 const router = express.Router();
 
 // Admin Routes
-router.post("/create", isAuth, verifyAdmin, upload.array("images", 4), createProject);
+router.post("/create", isAuth, verifyAdmin, upload.array("images"), createProject);
 router.delete("/delete/:id", isAuth, verifyAdmin, deleteProject);
 router.get("/admin", isAuth, verifyAdmin, getAllProjectsAdmin);
 

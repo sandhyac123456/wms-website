@@ -38,6 +38,12 @@ const AdminHeader = () => {
           >
             Blogs
           </Link>
+          <Link
+            to="/admin/projects-list"
+            className="text-blue-700 font-medium hover:underline text-sm sm:text-base"
+          >
+            Projects
+          </Link>
           <button
             onClick={handleLogout}
             className="bg-red-500 hover:bg-red-600 text-white font-semibold rounded-md px-4 py-2 text-sm sm:text-base transition"
