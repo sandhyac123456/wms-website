@@ -13,6 +13,7 @@ import applicationRouter from "./routes/application.route.js";
 import blogRouter from "./routes/blog.route.js";
 import categoryRouter from "./routes/category.route.js";
 import aiRouter from "./ai/ai.routes.js";
+import projectRouter from "./routes/project.route.js";
 
 const app = express()
 app.use(cookieParser());
@@ -32,6 +33,8 @@ app.use("/api/v1/applications", applicationRouter);
 app.use("/api/v1/blog",blogRouter);
 app.use("/api/v1/category",categoryRouter);
 app.use("/api/v1/ai",aiRouter);
+app.use("/api/v1/projects",projectRouter);
+
 const port = process.env.PORT || 3000;
 
 app.get("/", (req, res)=>{
